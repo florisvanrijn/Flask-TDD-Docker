@@ -2,6 +2,7 @@
 FROM python:3.8.0-alpine
 
 # set working directory
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # set environment varibles
@@ -16,4 +17,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # run server
-CMD python manage.py run -h 0.0.0.0
+CMD python3.8 manage.py run -h 0.0.0.0
