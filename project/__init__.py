@@ -4,7 +4,8 @@ import os
 
 from flask import Flask  # new
 from flask_sqlalchemy import SQLAlchemy
-
+from project.api.users import users_blueprint
+app.register_blueprint(users_blueprint)
 
 # instantiate the db
 db = SQLAlchemy()
